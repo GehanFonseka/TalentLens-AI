@@ -14,7 +14,7 @@ This website serves as the official academic research information and documentat
 
 This website documents the scientific problem, literature survey, research gap, component architecture, experimental benchmarks, academic deliverables, and presentation materials. It is independent of the operational enterprise software product.
 
-### The Research Group (R26-IT-082)
+### The Research Group 
 - **Gehan Fonseka (IT22248794):** Hiring Risk & Early Attrition Prediction Module (`gehanfonseka@gmail.com`)
 - **Chamudi Jayantha (IT22226914):** Intelligent Resume Parsing & Skill Proficiency Analysis (`chamuhimasha29471@gmail.com`)
 - **Kavishka Deshan (IT22195616):** Job–Candidate Matching & Explainable AI Engine (`kavishkadeshan428@gmail.com`)
@@ -26,7 +26,7 @@ This website documents the scientific problem, literature survey, research gap, 
 
 ---
 
-## 2. Seven Navigation Sections (Per SLIIT Guidelines)
+## 2. Seven Navigation Sections 
 
 1. **Home (`index.html`):** Project hero, research problem, 4 core subsystems, multimodal pipeline diagram, quantitative benchmarks, threshold comparison explorer, and team summary.
 2. **Domain (`domain.html`):** In-depth academic domain analysis, literature survey with 17 verified references, scientific gaps, formal objectives, 5-tier architecture, technology inventory, feature ablation results, and explicit evidence boundaries.
@@ -106,27 +106,4 @@ python -m http.server 8000
 Then open your browser to:
 `http://localhost:8000`
 
----
-
-## 5. Strict 20 MB Upload Limit Compliance
-
-- **Permitted Ceiling:** 20.0 MB (20,971,520 bytes)
-- **Current Folder Size:** ~14.6 MB
-- **Safety Margin:** > 5.3 MB headroom
-
-To ensure compliance with the course web upload limit, high-bitrate video contained in the proposal presentation was optimized with H.264 compression without altering slide content or formatting.
-
----
-
-## 6. How to Update Data and Assets
-
-All project information is centralized in a single file: `assets/js/data.js`.
-
-1. **To update member details or component titles:** Edit the `members` array in `data.js`.
-2. **To replace sample identification photos:**
-   - Place real portraits in `assets/images/placeholders/` (e.g. `gehan.jpg`).
-   - In `data.js`, set `photoPlaceholder: "assets/images/placeholders/gehan.jpg"` and `isSamplePhoto: false`.
-3. **To add new documents or presentations:**
-   - Drop the PDF or PPTX into `assets/documents/` or `assets/presentations/`.
-   - Add a metadata entry to `documents` or `presentations` in `data.js`.
-4. **To update milestone dates or marks:** Edit the `milestones` array in `data.js`.
+--
