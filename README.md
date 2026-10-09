@@ -60,7 +60,12 @@ research-website/
     ├── images/
     │   ├── sliit-crest.png      # Official university crest
     │   ├── project-logo.svg     # Vector project branding emblem
-    │   ├── placeholders/        # Clearly labelled sample member avatars
+    │   ├── team/                # Authentic researcher portrait photographs
+    │   │   ├── gehan.png
+    │   │   ├── chamudi.jpeg
+    │   │   ├── kavishka.jpeg
+    │   │   └── sajani.jpeg
+    │   ├── placeholders/        # SVG fallback avatars
     │   │   ├── gehan-placeholder.svg
     │   │   ├── jayantha-placeholder.svg
     │   │   ├── deshan-placeholder.svg

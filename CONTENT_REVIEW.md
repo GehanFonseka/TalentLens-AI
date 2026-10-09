@@ -89,10 +89,8 @@ In compliance with academic honesty requirements, the website discloses:
 ## 6. Sample Placeholders & Replacement Guide
 
 ### Identification Photographs
-- **Current Status:** Four high-contrast SVG placeholders (`gehan-placeholder.svg`, `jayantha-placeholder.svg`, `deshan-placeholder.svg`, `tennakoon-placeholder.svg`) with clear watermark notices. No fake AI portraits are used.
-- **How to Update:**
-  1. Add real portrait images (JPG/PNG, ~400×480 px) to `assets/images/placeholders/`.
-  2. In `assets/js/data.js`, update `photoPlaceholder` and set `isSamplePhoto: false`.
+- **Current Status:** Authentic researcher portrait photographs extracted directly from the official research presentation deck (`assets/images/team/gehan.png`, `chamudi.jpeg`, `kavishka.jpeg`, `sajani.jpeg`) are active across `about.html` and `assets/js/data.js`.
+- **Fallbacks:** SVG placeholders remain in `assets/images/placeholders/` as fallbacks if needed.
 
 ### Documents
 - **Available:** Group Research Paper, Topic Assessment Form, 4 Individual Proposals, Proposal Presentation Deck, Template.

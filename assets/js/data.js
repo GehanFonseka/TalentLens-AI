@@ -48,8 +48,8 @@ const PROJECT_DATA = {
       email: "gehanfonseka@gmail.com",
       component: "Hiring Risk & Early Attrition Prediction Module",
       shortComponent: "Retention Analytics & XAI",
-      photoPlaceholder: "assets/images/placeholders/gehan-placeholder.svg",
-      isSamplePhoto: true,
+      photoPlaceholder: "assets/images/team/gehan.png",
+      isSamplePhoto: false,
       bio: "Focuses on tabular turnover modeling, operational threshold calibration, and explainability mechanisms for post-hire retention forecasting.",
       responsibilities: [
         "Formulation and training of Optuna-tuned Ordered CatBoost classifier across 52 tabular features.",
@@ -69,8 +69,8 @@ const PROJECT_DATA = {
       email: "chamuhimasha29471@gmail.com",
       component: "Intelligent Resume Parsing & Skill Proficiency Analysis",
       shortComponent: "Resume Intelligence & NER",
-      photoPlaceholder: "assets/images/placeholders/jayantha-placeholder.svg",
-      isSamplePhoto: true,
+      photoPlaceholder: "assets/images/team/chamudi.jpeg",
+      isSamplePhoto: false,
       bio: "Specializes in multi-format resume text extraction, Named Entity Recognition, and contextual skill depth estimation.",
       responsibilities: [
         "Multi-stage ingestion pipeline processing PDF, DOCX, and TXT resumes with format and section preservation.",
@@ -90,8 +90,8 @@ const PROJECT_DATA = {
       email: "kavishkadeshan428@gmail.com",
       component: "Job–Candidate Matching & Explainable AI Engine",
       shortComponent: "Cross-Encoder Matching",
-      photoPlaceholder: "assets/images/placeholders/deshan-placeholder.svg",
-      isSamplePhoto: true,
+      photoPlaceholder: "assets/images/team/kavishka.jpeg",
+      isSamplePhoto: false,
       bio: "Focuses on deep semantic similarity modeling between unstructured candidate profiles and job descriptions.",
       responsibilities: [
         "Deployment of a 6-layer BERT Cross-Encoder (d=384, 12 heads, seq length L≤256) capturing token-to-token interactions.",
@@ -111,8 +111,8 @@ const PROJECT_DATA = {
       email: "sapurnat@gmail.com",
       component: "AI-Based Interview Evaluation & Soft Skill Analysis",
       shortComponent: "Speech & ASAG Intelligence",
-      photoPlaceholder: "assets/images/placeholders/tennakoon-placeholder.svg",
-      isSamplePhoto: true,
+      photoPlaceholder: "assets/images/team/sajani.jpeg",
+      isSamplePhoto: false,
       bio: "Investigates audio speech transcription, automated short-answer grading, and candidate readiness scoring.",
       responsibilities: [
         "WebRTC audio acquisition segmented via Silero VAD and transcribed using Faster-Whisper (Tiny INT8 CPU, 16 kHz).",
