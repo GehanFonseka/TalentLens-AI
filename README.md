@@ -80,7 +80,6 @@ research-website/
     │       ├── gantt-chart.png
     │       └── wbs-chart.png
     ├── documents/               # Real & sample PDF deliverables
-    │   ├── Multimodal-AI-Talent-Acquisition-Research-Paper.pdf
     │   ├── Topic-Assessment-Form-TAF_R26-IT-082.pdf
     │   ├── R26-IT-082_IT22248794_Fonseka_WGK_Proposal.pdf
     │   ├── R26-IT-082_IT22226914_Jayantha_CH_Proposal.pdf

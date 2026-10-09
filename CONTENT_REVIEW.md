@@ -93,7 +93,7 @@ In compliance with academic honesty requirements, the website discloses:
 - **Fallbacks:** SVG placeholders remain in `assets/images/placeholders/` as fallbacks if needed.
 
 ### Documents
-- **Available:** Group Research Paper, Topic Assessment Form, 4 Individual Proposals, Proposal Presentation Deck, Template.
+- **Available:** Topic Assessment Form, 4 Individual Proposals, Proposal Presentation Deck, Template.
 - **Sample Deliverables:** `Project-Charter-Sample.pdf` and `Ethics-Clearance-Checklist-Sample.pdf` (explicitly marked with red placeholder headers).
 - **Pending Deliverables:** Progress Reports 1 & 2, Individual Final Dissertations, Final Comprehensive Report.
 

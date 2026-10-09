@@ -268,15 +268,15 @@ const PROJECT_DATA = {
       date: "August 2026",
       status: "Completed / In Review",
       marksAllocated: "18% (18 Marks)",
-      summary: "Evaluation of advanced model fine-tuning, CatBoost threshold calibration (τ = 0.33), TreeSHAP attributions, and draft research paper.",
+      summary: "Evaluation of advanced model fine-tuning, CatBoost threshold calibration (τ = 0.33), TreeSHAP attributions, and empirical evaluation.",
       deliverables: [
         "Progress Report 2",
         "Progress Presentation 2 Slides",
-        "Conference Research Paper Draft",
+        "Empirical Benchmark Report",
         "Feature Ablation & Threshold Results"
       ],
       evidence: [
-        { title: "Group Research Paper (PDF)", url: "assets/documents/Multimodal-AI-Talent-Acquisition-Research-Paper.pdf" }
+        { title: "View Milestones Catalogue", url: "milestones.html#milestone-pp2" }
       ]
     },
     {
@@ -320,18 +320,6 @@ const PROJECT_DATA = {
 
   // Document Library Catalog
   documents: [
-    {
-      id: "doc-paper",
-      title: "An Integrated Multimodal AI Framework for Technical Recruitment and Workforce Retention Analytics",
-      category: "Group Research Paper",
-      component: "Full Platform & Empirical Benchmark",
-      date: "September 2026",
-      type: "PDF",
-      size: "1.49 MB",
-      status: "Available",
-      url: "assets/documents/Multimodal-AI-Talent-Acquisition-Research-Paper.pdf",
-      description: "Final group research paper presenting the 12-container microservice architecture, BERT cross-encoder, Platt-calibrated DeBERTa ASAG, and 5-fold cross-validation on 1,470 records."
-    },
     {
       id: "doc-taf",
       title: "Topic Assessment Form (TAF) — Project R26-IT-082",
