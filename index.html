@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Intelligent Talent Acquisition System | SLIIT Research Project R26-IT-082</title>
+  <meta name="description" content="Official academic research showcase for SLIIT Final Year Project R26-IT-082: An Integrated Multimodal AI Framework for Technical Recruitment and Workforce Retention Analytics.">
+  <meta name="author" content="SLIIT Research Group R26-IT-082">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" id="brand-logo-action" aria-label="Return to Research Home Page">
+        <img src="assets/images/sliit-crest.png" alt="SLIIT University Crest" class="brand-crest">
+        <div class="brand-info">
+          <span class="brand-title">
+            TalentLens AI
+            <span class="brand-badge">R26-IT-082</span>
+          </span>
+          <span class="brand-sub">SLIIT Faculty of Computing • 2025/2026</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Primary site navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="domain.html" class="nav-link" id="nav-domain">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link" id="nav-milestones">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link" id="nav-documents">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link" id="nav-presentations">Slides</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="home-hero" id="hero-overview">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span>●</span> SLIIT Research Project • R26-IT-082
+          </div>
+
+          <h1 class="hero-title">
+            AI-Powered Intelligent <br>
+            <span class="text-gradient-emerald">Talent Acquisition</span> System
+          </h1>
+
+          <p class="hero-subtitle">
+            An integrated multimodal research framework combining multi-format resume parsing, deep cross-encoder semantic matching, speech interview scoring, and explainable workforce retention analytics.
+          </p>
+
+          <div class="hero-btn-group">
+            <a href="domain.html" class="btn btn-primary" id="hero-btn-domain">
+              Explore Research →
+            </a>
+            <a href="documents.html" class="btn btn-secondary" id="hero-btn-docs">
+              Academic Documents
+            </a>
+            <a href="assets/documents/Multimodal-AI-Talent-Acquisition-Research-Paper.pdf" class="btn btn-secondary" download id="hero-btn-paper">
+              Download Paper (.pdf)
+            </a>
+          </div>
+
+          <!-- 4 KEY METRICS -->
+          <div class="stats-grid" id="hero-stats">
+            <div class="glass-card stat-card">
+              <div class="stat-num">1,470</div>
+              <div class="stat-lbl">Benchmark Records</div>
+              <div class="stat-desc">5-Fold Stratified Validation</div>
+            </div>
+
+            <div class="glass-card stat-card">
+              <div class="stat-num">50.62%</div>
+              <div class="stat-lbl">Turnover Recall</div>
+              <div class="stat-desc">Tuned Threshold (τ = 0.33)</div>
+            </div>
+
+            <div class="glass-card stat-card">
+              <div class="stat-num">12</div>
+              <div class="stat-lbl">Microservices</div>
+              <div class="stat-desc">Five-Tier Architecture</div>
+            </div>
+
+            <div class="glass-card stat-card">
+              <div class="stat-num">4</div>
+              <div class="stat-lbl">Core Modules</div>
+              <div class="stat-desc">Integrated AI Pipeline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: ABSTRACT -->
+    <section class="section section-alt" id="abstract">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">01 • Abstract</div>
+          <h2 class="section-title">The Problem &amp; Our Solution</h2>
+          <p class="section-desc">
+            Addressing severe structural fragmentation in technical hiring through an end-to-end, multimodal artificial intelligence ecosystem.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="glass-card">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #fbbf24; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">
+              The Operational Bottleneck
+            </div>
+            <h3 style="font-size: 1.35rem; color: var(--text-white); margin-bottom: 1rem;">Conventional Hiring Fragilities</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem;">
+              Technical talent recruitment is characterized by severe operational friction. Conventional Applicant Tracking Systems rely on rigid keyword search, ignoring semantic equivalence and rejecting capable engineers who express competencies in alternative phrasing.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem;">
+              Live technical screenings lack standardized, calibrated scoring rubrics, leading to subjective interviewer evaluations. Furthermore, employee turnover is treated as an unpredictable post-hire crisis costing organizations <strong>150%–200% of an annual salary</strong> per departure.
+            </p>
+          </div>
+
+          <div class="glass-card" style="border-top: 2px solid var(--primary);">
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary-glow); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">
+              Our Research Approach
+            </div>
+            <h3 style="font-size: 1.35rem; color: var(--text-white); margin-bottom: 1rem;">Multimodal AI Pipeline</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem;">
+              Project R26-IT-082 proposes an integrated multimodal architecture that automates candidate profiling, semantic matching, oral speech assessment, and advisory retention forecasting under strict human governance.
+            </p>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem;">
+              By combining CRF-based entity extraction, a 6-layer BERT Cross-Encoder, Faster-Whisper speech inference with Platt-calibrated DeBERTa-v3 grading, and an Ordered CatBoost model with TreeSHAP explanations, the system provides transparent, data-driven hiring decision support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FOUR RESEARCH MODULES -->
+    <section class="section" id="modules">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">02 • Subsystems</div>
+          <h2 class="section-title">Four Core Research Modules</h2>
+          <p class="section-desc">
+            Four specialized research investigations integrated into a unified talent intelligence platform.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Module 1 -->
+          <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <span style="font-size: 1.5rem;">📄</span>
+              <span class="badge badge-emerald">Module 01</span>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--text-white); margin-bottom: 0.5rem;">Intelligent Resume Parsing &amp; Skill Proficiency</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Multi-format document ingestion (PDF, DOCX, TXT) with SpaCy and Conditional Random Fields (CRF NER) to extract skills, tenure, and education, evaluated by a DeBERTa-v3 heuristic quality regressor.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+              <div>
+                <strong style="color: var(--text-white); font-size: 0.88rem; display: block;">Chamudi Jayantha</strong>
+                <span style="font-size: 0.75rem; color: var(--text-dim);">IT22226914</span>
+              </div>
+              <a href="domain.html#section-methodology" class="btn btn-secondary btn-sm">Methodology →</a>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <span style="font-size: 1.5rem;">🎯</span>
+              <span class="badge badge-emerald">Module 02</span>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--text-white); margin-bottom: 0.5rem;">Job–Candidate Semantic Matching &amp; XAI</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              6-layer BERT Cross-Encoder architecture running on ONNX Runtime to evaluate full sequence-pair token interactions at threshold τ=0.44, providing transparent matching justifications.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+              <div>
+                <strong style="color: var(--text-white); font-size: 0.88rem; display: block;">Kavishka Deshan</strong>
+                <span style="font-size: 0.75rem; color: var(--text-dim);">IT22195616</span>
+              </div>
+              <a href="domain.html#section-methodology" class="btn btn-secondary btn-sm">Methodology →</a>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <span style="font-size: 1.5rem;">🎙️</span>
+              <span class="badge badge-emerald">Module 03</span>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--text-white); margin-bottom: 0.5rem;">AI-Based Interview Evaluation &amp; Soft Skills</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              WebRTC candidate audio processing via Silero VAD, Faster-Whisper INT8 transcription, and Platt-calibrated 12-layer DeBERTa-v3 short-answer grading across 5 ordinal tiers.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+              <div>
+                <strong style="color: var(--text-white); font-size: 0.88rem; display: block;">Sajani Tennakoon</strong>
+                <span style="font-size: 0.75rem; color: var(--text-dim);">IT22197832</span>
+              </div>
+              <a href="domain.html#section-methodology" class="btn btn-secondary btn-sm">Methodology →</a>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <span style="font-size: 1.5rem;">📊</span>
+              <span class="badge badge-emerald">Module 04</span>
+            </div>
+            <h3 style="font-size: 1.25rem; color: var(--text-white); margin-bottom: 0.5rem;">Hiring Attrition Risk &amp; Retention Analytics</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+              Optuna-tuned Ordered CatBoost classifier across 52 tabular features with operating threshold τ=0.33, TreeSHAP attributions, feature ablation study, and policy simulation.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+              <div>
+                <strong style="color: var(--text-white); font-size: 0.88rem; display: block;">Gehan Fonseka</strong>
+                <span style="font-size: 0.75rem; color: var(--text-dim);">IT22248794</span>
+              </div>
+              <a href="domain.html#section-methodology" class="btn btn-secondary btn-sm">Methodology →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SYSTEM ARCHITECTURE -->
+    <section class="section section-alt" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">03 • Architecture</div>
+          <h2 class="section-title">End-to-End Pipeline Blueprint</h2>
+          <p class="section-desc">
+            Evidence flow spanning Candidate Ingestion, Cross-Encoder Matching, Interview Evaluation, Retention Forecasting, and Human Governance.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="color: var(--text-white); font-size: 1.2rem; margin-bottom: 4px;">Recruitment Intelligence Lifecycle</h3>
+              <span style="font-size: 0.82rem; color: var(--text-dim);">Figure 1 in Group Research Paper • System Architecture Blueprint</span>
+            </div>
+            <a href="assets/images/diagrams/recruitment-lifecycle.svg" target="_blank" class="btn btn-secondary btn-sm">
+              View Full Vector Diagram ↗
+            </a>
+          </div>
+
+          <div style="background: rgba(4, 8, 18, 0.6); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; border: 1px solid var(--border-subtle);">
+            <img src="assets/images/diagrams/recruitment-lifecycle.svg" alt="Recruitment Intelligence Lifecycle Architecture" style="max-width: 100%; height: auto; border-radius: var(--radius-sm);">
+          </div>
+
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1.25rem; text-align: center; line-height: 1.6;">
+            Conceptual workflow demonstrating the multi-stage pipeline: candidate ingestion, semantic token scoring, speech inference, CatBoost retention modeling, and human-in-the-loop decision authority.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EMPIRICAL FINDINGS -->
+    <section class="section" id="findings">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">04 • Empirical Findings</div>
+          <h2 class="section-title">Verified Quantitative Results</h2>
+          <p class="section-desc">
+            Rigorous cross-validation benchmarks on the adapted HR benchmark and the regional workforce survey.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Dataset 1 -->
+          <div class="glass-card" style="border-top: 2px solid var(--primary);">
+            <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; color: var(--primary-glow); margin-bottom: 0.5rem; text-transform: uppercase;">
+              <span>●</span> Primary Line: Adapted HR Benchmark
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-white); margin-bottom: 0.75rem;">Ordered CatBoost Retention Model</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+              Evaluated on 1,470 records (237 positive turnover cases, 16.12% prevalence) under 1:5.20 class imbalance with 5-fold stratified cross-validation.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1.5rem;">
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">ROC-AUC</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-top: 2px;">0.8071</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">PR-AUC</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-top: 2px;">0.5753</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Recall (τ=0.33)</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--primary-glow); margin-top: 2px;">50.62%</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Minority F1 (τ=0.33)</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--accent-blue); margin-top: 2px;">50.34%</p>
+              </div>
+            </div>
+
+            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-md); padding: 12px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+              <strong>Threshold Tuning (τ=0.33):</strong> Captures 50.62% of true turnover departures (+15.16 percentage points over standard 0.50 threshold) without degrading ranking discrimination.
+            </div>
+          </div>
+
+          <!-- Dataset 2 -->
+          <div class="glass-card" style="border-top: 2px solid var(--accent-blue);">
+            <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.5rem; text-transform: uppercase;">
+              <span>●</span> Secondary Line: Regional Survey
+            </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-white); margin-bottom: 0.75rem;">Empirical Sri Lankan Tech Survey</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+              Independent empirical investigation gathered from 835 Sri Lankan technical professionals, with modeling verified on an untouched holdout set of 167 observations.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 1.5rem;">
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Survey Responses</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-top: 2px;">835</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Holdout Observations</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--text-white); margin-top: 2px;">167</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Holdout ROC-AUC</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--primary-glow); margin-top: 2px;">0.9029</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <span style="font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700;">Holdout F1 Score</span>
+                <p style="font-size: 1.5rem; font-weight: 800; color: var(--accent-blue); margin-top: 2px;">64.15%</p>
+              </div>
+            </div>
+
+            <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: var(--radius-md); padding: 12px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+              <strong>Scientific Protocol Note:</strong> These two datasets represent independent empirical studies and are strictly preserved as separate scientific lines; they are never merged into a single composite dataset.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MILESTONES PREVIEW -->
+    <section class="section section-alt" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">05 • Milestones</div>
+          <h2 class="section-title">Academic Roadmap &amp; Progress</h2>
+          <p class="section-desc">
+            Systematic progression from topic approval to final viva voce examination.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 2.5rem;">
+          <div class="glass-card stat-card" style="padding: 1.25rem;">
+            <span class="badge badge-emerald" style="margin-bottom: 8px;">Completed</span>
+            <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Project Proposal</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">March 2026 • 12% Marks</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">TAF approved, 4 individual proposals defended, 33 slides presented.</p>
+          </div>
+
+          <div class="glass-card stat-card" style="padding: 1.25rem;">
+            <span class="badge badge-emerald" style="margin-bottom: 8px;">Completed</span>
+            <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Progress Pres. 1</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">June 2026 • 15% Marks</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">50% review covering parser pipeline, audio transcription, baseline models.</p>
+          </div>
+
+          <div class="glass-card stat-card" style="padding: 1.25rem;">
+            <span class="badge badge-emerald" style="margin-bottom: 8px;">Completed</span>
+            <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Progress Pres. 2</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">August 2026 • 18% Marks</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">90% review: threshold tuning (τ=0.33), TreeSHAP, and paper draft.</p>
+          </div>
+
+          <div class="glass-card stat-card-cyan" style="padding: 1.25rem;">
+            <span class="badge badge-cyan" style="margin-bottom: 8px;">In Progress</span>
+            <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Final Assessment</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">October 2026 • 40% Marks</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">Final thesis volume, 4 dissertation books, and research website.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.25rem; border-top: 2px solid var(--accent-amber);">
+            <span class="badge badge-amber" style="margin-bottom: 8px;">Scheduled</span>
+            <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Viva Voce</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">November 2026 • 15% Marks</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 8px;">Oral system defense and live 12-container demonstration.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <a href="milestones.html" class="btn btn-secondary">
+            View Complete Milestones &amp; Rubrics →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+            <img src="assets/images/sliit-crest.png" alt="SLIIT Crest" style="height: 36px; width: auto;">
+            <span style="font-weight: 800; font-family: var(--font-display); color: var(--text-white); font-size: 1.1rem;">
+              TalentLens AI
+            </span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; max-width: 320px;">
+            SLIIT Final Year Undergraduate Research Project <strong>R26-IT-082</strong>. Department of Information Technology, Faculty of Computing.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Slides</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Project</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="assets/documents/Multimodal-AI-Talent-Acquisition-Research-Paper.pdf" target="_blank">Research Paper</a></li>
+            <li><a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download>Proposal Deck</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Institution</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+            Sri Lanka Institute of Information Technology<br>
+            New Kandy Road, Malabe, Sri Lanka<br>
+            Academic Period: 2025/2026
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SLIIT Research Project R26-IT-082. All rights reserved.</span>
+        <span>Built for academic viva presentation and final year assessment.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 580" width="100%" height="auto">
+  <defs>
+    <linearGradient id="tierBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080F1E"/>
+      <stop offset="100%" stop-color="#0E1A30"/>
+    </linearGradient>
+    <linearGradient id="t1Head" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="t2Head" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="t3Head" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="t4Head" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="t5Head" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#F87171"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="580" rx="16" fill="url(#tierBg)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="40" y="42" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#F8FAFC">Five-Tier Enterprise Talent Intelligence Architecture</text>
+  <text x="40" y="65" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Separation of application logic, AI microservices, persistence, and governance (Twelve Service Containers)</text>
+
+  <!-- TIER 1 -->
+  <g transform="translate(40, 85)">
+    <rect width="1020" height="74" rx="10" fill="#0F172A" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 220 0 L 205 74 L 0 74 Z" fill="url(#t1Head)"/>
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">TIER 1 : CLIENT PRESENTATION</text>
+    <text x="20" y="52" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">React 18 + Vite Frontend SPA</text>
+    
+    <g transform="translate(235, 14)">
+      <rect width="240" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="22" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#38BDF8">Candidate Portal</text>
+      <text x="14" y="38" font-family="'Inter', sans-serif" font-size="9.5" fill="#94A3B8">Resume Upload, Audio Record, WebRTC</text>
+    </g>
+    <g transform="translate(495, 14)">
+      <rect width="240" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="22" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#38BDF8">Recruiter Workspace</text>
+      <text x="14" y="38" font-family="'Inter', sans-serif" font-size="9.5" fill="#94A3B8">Rankings, Cross-Encoder Inspect, Review</text>
+    </g>
+    <g transform="translate(755, 14)">
+      <rect width="240" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="22" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#38BDF8">Interview &amp; Attrition Studio</text>
+      <text x="14" y="38" font-family="'Inter', sans-serif" font-size="9.5" fill="#94A3B8">Platt Rubrics, TreeSHAP, What-If Sim</text>
+    </g>
+  </g>
+
+  <!-- TIER 2 -->
+  <g transform="translate(40, 175)">
+    <rect width="1020" height="66" rx="10" fill="#0F172A" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 220 0 L 205 66 L 0 66 Z" fill="url(#t2Head)"/>
+    <text x="20" y="28" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">TIER 2 : API GATEWAY</text>
+    <text x="20" y="48" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Express.js :8080 Security Hub</text>
+    
+    <g transform="translate(235, 11)">
+      <rect width="240" height="42" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#818CF8">JWT Authentication</text>
+      <text x="14" y="34" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Token Verification &amp; Session Guard</text>
+    </g>
+    <g transform="translate(495, 11)">
+      <rect width="240" height="42" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#818CF8">Role-Based Access Control</text>
+      <text x="14" y="34" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Recruiter, Manager, Admin RBAC</text>
+    </g>
+    <g transform="translate(755, 11)">
+      <rect width="240" height="42" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#818CF8">Dynamic Reverse Proxy</text>
+      <text x="14" y="34" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">REST Routing to 12 Microservices</text>
+    </g>
+  </g>
+
+  <!-- TIER 3 -->
+  <g transform="translate(40, 257)">
+    <rect width="1020" height="74" rx="10" fill="#0F172A" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 220 0 L 205 74 L 0 74 Z" fill="url(#t3Head)"/>
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">TIER 3 : DOMAIN SERVICES</text>
+    <text x="20" y="52" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Application Business Logic</text>
+    
+    <g transform="translate(235, 14)">
+      <rect width="180" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#34D399">Auth Service</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Node.js :3001/:3002</text>
+    </g>
+    <g transform="translate(430, 14)">
+      <rect width="180" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#34D399">CV Extraction</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Node.js :4001</text>
+    </g>
+    <g transform="translate(625, 14)">
+      <rect width="180" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#34D399">Job Match Domain</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Node.js :4004</text>
+    </g>
+    <g transform="translate(820, 14)">
+      <rect width="180" height="46" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#34D399">Interview Domain</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Node.js :4006/:4007</text>
+    </g>
+  </g>
+
+  <!-- TIER 4 -->
+  <g transform="translate(40, 347)">
+    <rect width="1020" height="96" rx="10" fill="#0F172A" stroke="rgba(245, 158, 11, 0.35)" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 220 0 L 205 96 L 0 96 Z" fill="url(#t4Head)"/>
+    <text x="20" y="38" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">TIER 4 : AI / ML INFERENCE</text>
+    <text x="20" y="58" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">Python FastAPI + ONNX Runtime</text>
+    <text x="20" y="74" font-family="'Inter', sans-serif" font-size="8.5" fill="rgba(255,255,255,0.7)">(Isolated GPU/CPU Containers)</text>
+    
+    <g transform="translate(235, 14)">
+      <rect width="180" height="68" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">CV Scoring &amp; Match</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#E2E8F0">BERT Cross-Enc (:4002)</text>
+      <text x="10" y="50" font-family="'Inter', sans-serif" font-size="8.5" fill="#94A3B8">DeBERTa-v3 Reg (:4009)</text>
+      <text x="10" y="62" font-family="'Inter', sans-serif" font-size="8" fill="#F59E0B">Threshold τ=0.44</text>
+    </g>
+    <g transform="translate(430, 14)">
+      <rect width="180" height="68" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">Speech Transcription</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#E2E8F0">Faster-Whisper Tiny (:4005)</text>
+      <text x="10" y="50" font-family="'Inter', sans-serif" font-size="8.5" fill="#94A3B8">Silero VAD, 16kHz INT8</text>
+      <text x="10" y="62" font-family="'Inter', sans-serif" font-size="8" fill="#F59E0B">Real-time Stream Trans</text>
+    </g>
+    <g transform="translate(625, 14)">
+      <rect width="180" height="68" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">ASAG Answer Grading</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#E2E8F0">DeBERTa-v3 12L (:4010)</text>
+      <text x="10" y="50" font-family="'Inter', sans-serif" font-size="8.5" fill="#94A3B8">Platt Calibration (0–100)</text>
+      <text x="10" y="62" font-family="'Inter', sans-serif" font-size="8" fill="#F59E0B">5 Ordinal Tiers</text>
+    </g>
+    <g transform="translate(820, 14)">
+      <rect width="180" height="68" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">Retention Analytics</text>
+      <text x="10" y="36" font-family="'Inter', sans-serif" font-size="9" fill="#E2E8F0">CatBoost 52 feats (:4008)</text>
+      <text x="10" y="50" font-family="'Inter', sans-serif" font-size="8.5" fill="#94A3B8">TreeSHAP + What-If (:4003)</text>
+      <text x="10" y="62" font-family="'Inter', sans-serif" font-size="8" fill="#F59E0B">Optuna Tuned τ=0.33</text>
+    </g>
+  </g>
+
+  <!-- TIER 5 -->
+  <g transform="translate(40, 459)">
+    <rect width="1020" height="68" rx="10" fill="#0F172A" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1.2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 220 0 L 205 68 L 0 68 Z" fill="url(#t5Head)"/>
+    <text x="20" y="30" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">TIER 5 : PERSISTENCE</text>
+    <text x="20" y="50" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="rgba(255,255,255,0.85)">MongoDB &amp; Artifact Storage</text>
+    
+    <g transform="translate(235, 12)">
+      <rect width="240" height="44" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F87171">DB: lanka_talent</text>
+      <text x="14" y="35" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Users, Resumes, Jobs, Candidates, Auth</text>
+    </g>
+    <g transform="translate(495, 12)">
+      <rect width="240" height="44" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F87171">DB: lanka_talent_analysis</text>
+      <text x="14" y="35" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Transcripts, ASAG Scores, Attrition Records</text>
+    </g>
+    <g transform="translate(755, 12)">
+      <rect width="240" height="44" rx="6" fill="#1E293B" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F87171">Model Registry &amp; Artifacts</text>
+      <text x="14" y="35" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">ONNX Models, CatBoost Dumps, SHAP trees</text>
+    </g>
+  </g>
+
+  <!-- Footer Notice -->
+  <text x="550" y="555" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#64748B" text-anchor="middle">Project ID: R26-IT-082 • Sri Lanka Institute of Information Technology (SLIIT) • Faculty of Computing</text>
+</svg>

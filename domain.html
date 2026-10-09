@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domain &amp; Methodology | AI-Powered Intelligent Talent Acquisition System</title>
+  <meta name="description" content="Academic domain review, literature survey, research problem, research gap, methodology, and verified findings for SLIIT Research Project R26-IT-082.">
+  <meta name="author" content="SLIIT Research Group R26-IT-082">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" id="brand-logo-action" aria-label="Return to Research Home Page">
+        <img src="assets/images/sliit-crest.png" alt="SLIIT University Crest" class="brand-crest">
+        <div class="brand-info">
+          <span class="brand-title">
+            TalentLens AI
+            <span class="brand-badge">R26-IT-082</span>
+          </span>
+          <span class="brand-sub">SLIIT Faculty of Computing • 2025/2026</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Primary site navigation">
+        <ul class="nav-menu" id="primary-nav-menu">
+          <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="domain.html" class="nav-link active" id="nav-domain">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link" id="nav-milestones">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link" id="nav-documents">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link" id="nav-presentations">Slides</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About Us</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- PAGE HEADER COMPONENT (Matches cse-stock-insight-six) -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">02 • Domain</div>
+        <h1 class="page-header-title">
+          The research <span class="text-gradient-emerald">landscape.</span>
+        </h1>
+        <p class="page-header-desc">
+          Literature survey, research gaps, problem statement, objectives, and five-tier microservice methodology.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACCORDION CONTENT SECTION -->
+    <section class="section" id="domain-accordion-section">
+      <div class="container">
+        <div class="domain-accordion-list">
+
+          <!-- 01. LITERATURE SURVEY -->
+          <div class="accordion-item active" id="sec-literature">
+            <button class="accordion-trigger" aria-expanded="true">
+              <span>01. Literature Survey</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                In high-volume recruitment workflows, manual resume evaluation is labor-intensive and prone to cognitive bias. Traditional Applicant Tracking Systems (ATS) rely heavily on exact keyword matching, creating what researchers identify as the <em>Lexical Screening Trap</em> [1]. Candidates using synonymous terminology (e.g., "PostgreSQL" vs "relational databases") are routinely penalized.
+              </p>
+
+              <div class="data-table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Domain Area</th>
+                      <th>Pioneering Work</th>
+                      <th>Conventional Approach</th>
+                      <th>Identified Scientific Limit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Resume Parsing</strong></td>
+                      <td>Zaroor et al. (2019)</td>
+                      <td>Regex &amp; rule-based matching</td>
+                      <td>Fragile across dynamic multi-column layouts and tables.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Candidate Matching</strong></td>
+                      <td>Devlin et al. (2019); Reimers (2019)</td>
+                      <td>Bi-Encoder cosine similarity</td>
+                      <td>Lacks token-level cross-attention; misses context subtleties.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Interview Evaluation</strong></td>
+                      <td>Radford et al. (2022 Whisper)</td>
+                      <td>Uncalibrated rubric scoring</td>
+                      <td>High variance across human interviewers; uncalibrated ordinal tiers.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Turnover Prediction</strong></td>
+                      <td>Prokhorenkova et al. (2018 CatBoost)</td>
+                      <td>Default τ=0.50 cutoff models</td>
+                      <td>Severe minority recall suppression under high class imbalance.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                To resolve these limits, our research grounds itself in state-of-the-art architectures: Conditional Random Fields (CRF) for structured entity tagging, full sequence-pair BERT Cross-Encoders for semantic matching, Faster-Whisper with Platt-calibrated DeBERTa-v3 for interview grading, and Ordered CatBoost with TreeSHAP for retention forecasting.
+              </p>
+            </div>
+          </div>
+
+          <!-- 02. RESEARCH GAP -->
+          <div class="accordion-item" id="sec-gap">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>02. Research Gap</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Despite advancements in commercial HR tech, existing platforms suffer from four acute structural voids:
+              </p>
+              
+              <div class="grid-2" style="margin-top: 1rem; margin-bottom: 1rem;">
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                  <strong style="color: var(--text-white); display: block; margin-bottom: 4px;">1. Semantic Disconnect</strong>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+                    Screening algorithms evaluate surface keyword frequency rather than conceptual competency depth and demonstrated project proficiency.
+                  </p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                  <strong style="color: var(--text-white); display: block; margin-bottom: 4px;">2. Uncalibrated Oral Evaluation</strong>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+                    Technical oral assessments lack automated transcription grounding and probabilistic calibration across multi-tier ordinal rubric scales.
+                  </p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--accent-blue);">
+                  <strong style="color: var(--text-white); display: block; margin-bottom: 4px;">3. Reactive Turnover Management</strong>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+                    Turnover analysis operates exclusively post-hire through exit questionnaires rather than advisory pre-hire risk screening.
+                  </p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border-left: 3px solid var(--accent-blue);">
+                  <strong style="color: var(--text-white); display: block; margin-bottom: 4px;">4. Monolithic Silos</strong>
+                  <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+                    Recruitment tools operate as disconnected point solutions, preventing holistic multi-factor candidate analysis under unified explainable AI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03. RESEARCH PROBLEM -->
+          <div class="accordion-item" id="sec-problem">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>03. Research Problem</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                How can an integrated, multimodal artificial intelligence ecosystem streamline technical talent acquisition by accurately extracting candidate proficiencies, computing deep semantic alignment, conducting calibrated oral assessments, and forecasting retention risk under strict human governance?
+              </p>
+              <div style="background: rgba(13, 23, 38, 0.7); border: 1px solid var(--border-medium); border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1rem;">
+                <h4 style="color: var(--text-white); font-size: 1rem; margin-bottom: 6px;">Key Research Constraints</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  <li style="margin-bottom: 6px;">• <strong>Class Imbalance:</strong> Mitigating extreme 1:5.20 negative-to-positive ratio in turnover records.</li>
+                  <li style="margin-bottom: 6px;">• <strong>Low-Latency Inference:</strong> Ensuring BERT Cross-Encoder scoring operates within sub-second constraints on commodity hardware via ONNX Runtime.</li>
+                  <li style="margin-bottom: 6px;">• <strong>Ethical AI Guardrails:</strong> Providing complete local TreeSHAP attributions with strictly zero autonomous hiring decisions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04. RESEARCH OBJECTIVES -->
+          <div class="accordion-item" id="sec-objectives">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>04. Research Objectives</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                <strong>Main Objective:</strong> To formulate, implement, and validate a unified multimodal AI architecture for technical talent acquisition and retention analytics that optimizes screening accuracy and operational efficiency.
+              </p>
+
+              <h4 style="color: var(--text-white); margin: 1.25rem 0 0.75rem;">Specific Sub-Objectives</h4>
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--primary-glow);">Sub-Objective 1 (Chamudi Jayantha):</strong> Develop a multi-format parsing pipeline combining SpaCy and CRF entity recognition to extract skills, tenure, and education with heuristic quality regression.
+                </div>
+                <div style="padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--primary-glow);">Sub-Objective 2 (Kavishka Deshan):</strong> Engineer a 6-layer BERT Cross-Encoder on ONNX Runtime to evaluate full sequence-pair token interactions at operating cutoff τ=0.44.
+                </div>
+                <div style="padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--primary-glow);">Sub-Objective 3 (Sajani Tennakoon):</strong> Build a speech interview evaluation engine using Silero VAD, Faster-Whisper INT8 transcription, and Platt-calibrated DeBERTa-v3 ordinal grading.
+                </div>
+                <div style="padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--primary-glow);">Sub-Objective 4 (Gehan Fonseka):</strong> Train an Optuna-tuned Ordered CatBoost model across 52 tabular features with operating threshold τ=0.33, TreeSHAP attributions, and What-If simulation.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05. METHODOLOGY & 12 MICROSERVICES -->
+          <div class="accordion-item" id="sec-methodology">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>05. Methodology &amp; 12 Microservices</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Our system is organized as a resilient <strong>Five-Tier Distributed Microservice Architecture</strong> composed of 12 decoupled Docker containers:
+              </p>
+
+              <div class="data-table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Tier Level</th>
+                      <th>Container Service</th>
+                      <th>Technology Stack</th>
+                      <th>Core Functionality</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Tier 1: Presentation</strong></td>
+                      <td>Web Dashboard (port 3000)</td>
+                      <td>React, Vite, CSS</td>
+                      <td>Interactive candidate portal and recruiter dashboard.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 2: Gateway</strong></td>
+                      <td>API Gateway (port 4000)</td>
+                      <td>Express, JWT, CORS</td>
+                      <td>Request routing, rate limiting, and centralized authentication.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 3: Core Logic</strong></td>
+                      <td>Recruitment Core (port 4001)</td>
+                      <td>Node.js, Express</td>
+                      <td>Candidate workflows, application states, audit logs.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 4: AI Inference</strong></td>
+                      <td>Matching Engine (port 4002)</td>
+                      <td>Node.js, ONNX Runtime</td>
+                      <td>6-layer BERT Cross-Encoder scoring at τ=0.44.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 4: AI Inference</strong></td>
+                      <td>Interview Engine (port 4003)</td>
+                      <td>Python, Faster-Whisper</td>
+                      <td>INT8 audio transcription and DeBERTa-v3 rubric grading.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 4: AI Inference</strong></td>
+                      <td>Retention Engine (port 4004)</td>
+                      <td>Python, CatBoost, SHAP</td>
+                      <td>52-feature turnover scoring at τ=0.33 and TreeSHAP.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Tier 5: Persistence</strong></td>
+                      <td>MongoDB &amp; Redis</td>
+                      <td>Mongo 7.0, Redis 7.2</td>
+                      <td>Document datastore and in-memory caching.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div style="text-align: center; margin-top: 1.5rem;">
+                <img src="assets/images/diagrams/recruitment-lifecycle.svg" alt="Recruitment Architecture Workflow" style="max-width: 100%; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); padding: 1rem; background: #040814;">
+              </div>
+            </div>
+          </div>
+
+          <!-- 06. TECHNOLOGIES USED -->
+          <div class="accordion-item" id="sec-technologies">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>06. Technologies Used</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <div class="grid-3" style="gap: 16px;">
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--primary-glow); display: block; margin-bottom: 8px;">Machine Learning &amp; AI</strong>
+                  <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8;">
+                    <li>• CatBoost &amp; Optuna</li>
+                    <li>• TreeSHAP (XAI)</li>
+                    <li>• ONNX Runtime</li>
+                    <li>• Faster-Whisper INT8</li>
+                    <li>• DeBERTa-v3 &amp; HuggingFace</li>
+                    <li>• SpaCy &amp; sklearn-crfsuite</li>
+                  </ul>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <strong style="color: var(--accent-blue); display: block; margin-bottom: 8px;">Backend &amp; Infrastructure</strong>
+                  <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8;">
+                    <li>• Node.js &amp; Express</li>
+                    <li>• Python 3.10 / FastAPI</li>
+                    <li>• Docker &amp; Docker Compose</li>
+                    <li>• MongoDB 7.0</li>
+                    <li>• Redis 7.2 Cache</li>
+                    <li>• WebRTC Audio Streams</li>
+                  </ul>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <strong style="color: #fbbf24; display: block; margin-bottom: 8px;">Frontend &amp; Analytics</strong>
+                  <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted); line-height: 1.8;">
+                    <li>• React 18 &amp; Vite</li>
+                    <li>• Vanilla CSS3 Design System</li>
+                    <li>• Chart.js &amp; Recharts</li>
+                    <li>• Scikit-learn Evaluation</li>
+                    <li>• SciPy Statistical Tests</li>
+                    <li>• Pandera Schema Validation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+            <img src="assets/images/sliit-crest.png" alt="SLIIT Crest" style="height: 36px; width: auto;">
+            <span style="font-weight: 800; font-family: var(--font-display); color: var(--text-white); font-size: 1.1rem;">
+              TalentLens AI
+            </span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; max-width: 320px;">
+            SLIIT Final Year Undergraduate Research Project <strong>R26-IT-082</strong>. Department of Information Technology, Faculty of Computing.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Slides</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Project</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="assets/documents/Multimodal-AI-Talent-Acquisition-Research-Paper.pdf" target="_blank">Research Paper</a></li>
+            <li><a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download>Proposal Deck</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Institution</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+            Sri Lanka Institute of Information Technology<br>
+            New Kandy Road, Malabe, Sri Lanka<br>
+            Academic Period: 2025/2026
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SLIIT Research Project R26-IT-082. All rights reserved.</span>
+        <span>Built for academic viva presentation and final year assessment.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#0B132B"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" fill="none" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="16" fill="url(#glowGrad)"/>
+  
+  <!-- Neural / Talent Acquisition Emblem -->
+  <path d="M24 10 L35 18 L31 32 L17 32 L13 18 Z" fill="none" stroke="url(#logoGrad)" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="24" cy="10" r="3" fill="#38BDF8"/>
+  <circle cx="35" cy="18" r="3" fill="#2DD4BF"/>
+  <circle cx="31" cy="32" r="3" fill="#0EA5E9"/>
+  <circle cx="17" cy="32" r="3" fill="#38BDF8"/>
+  <circle cx="13" cy="18" r="3" fill="#2DD4BF"/>
+  <circle cx="24" cy="22" r="4.5" fill="#FFFFFF"/>
+  <circle cx="24" cy="22" r="2.5" fill="#0284C7"/>
+  <path d="M24 22 L24 10 M24 22 L35 18 M24 22 L31 32 M24 22 L17 32 M24 22 L13 18" stroke="rgba(255, 255, 255, 0.5)" stroke-width="1.2"/>
+</svg>

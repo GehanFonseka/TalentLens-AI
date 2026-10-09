@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070E1E"/>
+      <stop offset="100%" stop-color="#0B1528"/>
+    </linearGradient>
+    <linearGradient id="c1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="c2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="c3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="c4Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background frame -->
+  <rect width="1100" height="520" rx="16" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="40" y="45" font-family="'Inter', sans-serif" font-size="19" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">Four-Stage Recruitment Intelligence Lifecycle</text>
+  <text x="40" y="70" font-family="'Inter', sans-serif" font-size="12.5" font-weight="500" fill="#94A3B8">Evidence flow from candidate inputs to governed workforce decisions (R26-IT-082)</text>
+
+  <!-- Stage 1 Card -->
+  <g transform="translate(40, 95)" filter="url(#cardShadow)">
+    <rect width="230" height="295" rx="12" fill="#0F172A" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1.2"/>
+    <rect width="230" height="38" rx="12" fill="url(#c1Grad)"/>
+    <rect y="26" width="230" height="12" fill="url(#c1Grad)"/>
+    <text x="16" y="24" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">01  INGESTION &amp; PROFILING</text>
+    
+    <text x="16" y="65" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8">INPUT</text>
+    <text x="16" y="85" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• Resume PDF / DOCX / TXT</text>
+    <text x="16" y="103" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• Job Requisition Spec</text>
+
+    <line x1="16" y1="120" x2="214" y2="120" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="142" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8">AI / PROCESSING</text>
+    <text x="16" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Regex extractor (pdf-parse)</text>
+    <text x="16" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• CRF NER (Skills, Exp, Edu)</text>
+    <text x="16" y="198" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• DeBERTa-v3 Regressor</text>
+    <text x="24" y="214" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">(Org, Spec, Completeness)</text>
+
+    <line x1="16" y1="230" x2="214" y2="230" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="252" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8">OUTPUT</text>
+    <text x="16" y="272" font-family="'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#38BDF8">Structured Profile Vector</text>
+    <text x="16" y="288" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Status: Operational</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 276 242 L 304 242" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="304,242 296,238 296,246" fill="#38BDF8"/>
+
+  <!-- Stage 2 Card -->
+  <g transform="translate(310, 95)" filter="url(#cardShadow)">
+    <rect width="230" height="295" rx="12" fill="#0F172A" stroke="rgba(96, 165, 250, 0.25)" stroke-width="1.2"/>
+    <rect width="230" height="38" rx="12" fill="url(#c2Grad)"/>
+    <rect y="26" width="230" height="12" fill="url(#c2Grad)"/>
+    <text x="16" y="24" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">02  SEMANTIC MATCHING</text>
+    
+    <text x="16" y="65" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#60A5FA">INPUT</text>
+    <text x="16" y="85" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• Candidate Profile Text</text>
+    <text x="16" y="103" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• Job Description Requisition</text>
+
+    <line x1="16" y1="120" x2="214" y2="120" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="142" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#60A5FA">AI / PROCESSING</text>
+    <text x="16" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• 6-layer BERT Cross-Encoder</text>
+    <text x="16" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• ONNX Runtime (d=384)</text>
+    <text x="16" y="198" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Token-level Self-Attention</text>
+    <text x="16" y="216" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Threshold τ = 0.44</text>
+
+    <line x1="16" y1="230" x2="214" y2="230" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="252" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#60A5FA">OUTPUT</text>
+    <text x="16" y="272" font-family="'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#60A5FA">Match Probability &amp; Ranking</text>
+    <text x="16" y="288" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Status: Implemented</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 546 242 L 574 242" stroke="#60A5FA" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="574,242 566,238 566,246" fill="#60A5FA"/>
+
+  <!-- Stage 3 Card -->
+  <g transform="translate(580, 95)" filter="url(#cardShadow)">
+    <rect width="230" height="295" rx="12" fill="#0F172A" stroke="rgba(45, 212, 191, 0.25)" stroke-width="1.2"/>
+    <rect width="230" height="38" rx="12" fill="url(#c3Grad)"/>
+    <rect y="26" width="230" height="12" fill="url(#c3Grad)"/>
+    <text x="16" y="24" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">03  INTERVIEW INTELLIGENCE</text>
+    
+    <text x="16" y="65" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#2DD4BF">INPUT</text>
+    <text x="16" y="85" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• WebRTC Candidate Audio</text>
+    <text x="16" y="103" font-family="'Inter', sans-serif" font-size="11.5" fill="#E2E8F0">• Technical Rubric References</text>
+
+    <line x1="16" y1="120" x2="214" y2="120" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="142" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#2DD4BF">AI / PROCESSING</text>
+    <text x="16" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Silero VAD + Faster-Whisper</text>
+    <text x="16" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• 12-layer DeBERTa-v3 ASAG</text>
+    <text x="16" y="198" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Platt Post-Hoc Calibration</text>
+    <text x="24" y="214" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">(No facial expression analysis)</text>
+
+    <line x1="16" y1="230" x2="214" y2="230" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="16" y="252" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#2DD4BF">OUTPUT</text>
+    <text x="16" y="272" font-family="'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#2DD4BF">5-Tier Rubric Score (0–100)</text>
+    <text x="16" y="288" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Status: Implemented (Trials pend.)</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 816 242 L 844 242" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="844,242 836,238 836,246" fill="#2DD4BF"/>
+
+  <!-- Stage 4 Card -->
+  <g transform="translate(850, 95)" filter="url(#cardShadow)">
+    <rect width="210" height="295" rx="12" fill="#0F172A" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1.2"/>
+    <rect width="210" height="38" rx="12" fill="url(#c4Grad)"/>
+    <rect y="26" width="210" height="12" fill="url(#c4Grad)"/>
+    <text x="14" y="24" font-family="'Inter', sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">04  RETENTION ANALYTICS</text>
+    
+    <text x="14" y="65" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">INPUT</text>
+    <text x="14" y="85" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• 52 Tabular Attributes</text>
+    <text x="14" y="103" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Regional LKR Salary</text>
+
+    <line x1="14" y1="120" x2="196" y2="120" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="14" y="142" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">AI / PROCESSING</text>
+    <text x="14" y="162" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Optuna Ordered CatBoost</text>
+    <text x="14" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• Threshold τ = 0.33</text>
+    <text x="14" y="198" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• TreeSHAP Attributions</text>
+    <text x="14" y="216" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">• What-If Sensitivity Δp̂</text>
+
+    <line x1="14" y1="230" x2="196" y2="230" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="14" y="252" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#FBBF24">OUTPUT</text>
+    <text x="14" y="272" font-family="'Inter', sans-serif" font-size="11.5" font-weight="600" fill="#FBBF24">Turnover Risk &amp; XAI Drivers</text>
+    <text x="14" y="288" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Status: Empirically Validated</text>
+  </g>
+
+  <!-- Connectors to Human Governance -->
+  <path d="M 155 390 L 155 425 L 550 425" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 425 390 L 425 425" stroke="#60A5FA" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 695 390 L 695 425" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 955 390 L 955 425 L 550 425" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Governance Bar -->
+  <g transform="translate(40, 435)" filter="url(#cardShadow)">
+    <rect width="1020" height="60" rx="12" fill="#0B132B" stroke="url(#govGrad)" stroke-width="1.8"/>
+    <circle cx="36" cy="30" r="14" fill="rgba(79, 70, 229, 0.25)" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="36" y="34" font-family="'Inter', sans-serif" font-size="14" font-weight="800" fill="#818CF8" text-anchor="middle">⚖</text>
+    <text x="65" y="28" font-family="'Inter', sans-serif" font-size="13.5" font-weight="800" fill="#F8FAFC">HUMAN DECISION AUTHORITY &amp; ETHICAL AI GOVERNANCE</text>
+    <text x="65" y="47" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#94A3B8">All AI predictions serve strictly as advisory decision support • Human recruiter retains final authority • Demographics excluded</text>
+    <rect x="880" y="16" width="124" height="28" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <text x="942" y="33" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#38BDF8" text-anchor="middle">HUMAN-IN-THE-LOOP</text>
+  </g>
+</svg>
