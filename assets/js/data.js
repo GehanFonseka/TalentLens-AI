@@ -35,6 +35,7 @@ const PROJECT_DATA = {
       }
     ],
     contactEmail: "talentlens.rp@gmail.com", // Representative research enquiry desk
+    contactPhone: "+94 71 879 4765", // 0718794765
     brandTitle: "TalentLens AI",
     location: "Malabe, Sri Lanka"
   },
