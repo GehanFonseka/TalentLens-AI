@@ -34,7 +34,7 @@ const PROJECT_DATA = {
         email: "samantha.r@sliit.lk"
       }
     ],
-    contactEmail: "TalentLensAI@gmail.com", // Representative research enquiry desk
+    contactEmail: "talentlens.rp@gmail.com", // Representative research enquiry desk
     brandTitle: "TalentLens AI",
     location: "Malabe, Sri Lanka"
   },

@@ -72,7 +72,7 @@
               <div class="contact-info-meta">
                 <span class="contact-info-label">GROUP EMAIL</span>
                 <span class="contact-info-val">
-                  <a href="mailto:TalentLensAI@gmail.com">TalentLensAI@gmail.com</a>
+                  <a href="mailto:talentlens.rp@gmail.com">talentlens.rp@gmail.com</a>
                 </span>
               </div>
             </div>
@@ -120,25 +120,33 @@
 
           <!-- RIGHT COLUMN: Direct Message Form Card -->
           <div class="contact-form-card">
-            <form id="contact-direct-form">
+            <form id="contact-direct-form" action="https://formsubmit.co/talentlens.rp@gmail.com" method="POST" data-netlify="true" name="contact">
               <!-- Name & Email Row -->
               <div class="contact-form-row">
                 <div class="contact-field-group">
                   <label for="contact-name" class="contact-field-label">Your Name</label>
-                  <input type="text" id="contact-name" class="contact-text-input" placeholder="Jane Doe" required>
+                  <input type="text" id="contact-name" name="name" class="contact-text-input" placeholder="Jane Doe" required>
                 </div>
                 <div class="contact-field-group">
                   <label for="contact-email" class="contact-field-label">Email</label>
-                  <input type="email" id="contact-email" class="contact-text-input" placeholder="jane@example.com" required>
+                  <input type="email" id="contact-email" name="email" class="contact-text-input" placeholder="jane@example.com" required>
                 </div>
               </div>
 
               <!-- Message Field -->
               <div class="contact-field-group">
                 <label for="contact-message" class="contact-field-label">Message</label>
-                <textarea id="contact-message" class="contact-textarea" maxlength="1000" placeholder="Tell us about your inquiry..." required></textarea>
+                <textarea id="contact-message" name="message" class="contact-textarea" maxlength="1000" placeholder="Tell us about your inquiry..." required></textarea>
                 <div class="contact-char-count" id="char-counter">0/1000</div>
               </div>
+
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_subject" value="[TalentLens AI] New Contact Form Message">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <!-- Submission Status Banner -->
+              <div id="contact-form-status" style="display: none; padding: 12px 16px; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.88rem; line-height: 1.5;"></div>
 
               <!-- Send Button -->
               <button type="submit" class="contact-btn-submit" id="submit-contact-btn">

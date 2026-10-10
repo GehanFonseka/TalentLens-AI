@@ -444,22 +444,79 @@ function initContactForm() {
       const name = document.getElementById('contact-name')?.value.trim() || 'Colleague';
       const email = document.getElementById('contact-email')?.value.trim() || '';
       const message = messageInput ? messageInput.value.trim() : '';
-      const recipient = window.PROJECT_DATA?.meta?.contactEmail || 'TalentLensAI@gmail.com';
-      const subject = `[TalentLens AI Inquiry] From ${name}`;
-      const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nSent via TalentLens AI Contact Portal`;
-
-      const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
+      const recipient = window.PROJECT_DATA?.meta?.contactEmail || 'talentlens.rp@gmail.com';
+      const statusBox = document.getElementById('contact-form-status');
       const submitBtn = document.getElementById('submit-contact-btn');
-      if (submitBtn) {
-        const originalHTML = submitBtn.innerHTML;
-        submitBtn.innerHTML = `✓ Opening Email...`;
-        setTimeout(() => {
-          submitBtn.innerHTML = originalHTML;
-        }, 3000);
+
+      if (!message || !email) {
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.style.background = 'rgba(239, 68, 68, 0.12)';
+          statusBox.style.border = '1px solid rgba(239, 68, 68, 0.35)';
+          statusBox.style.color = '#f87171';
+          statusBox.innerHTML = 'Please fill out your name, email, and message.';
+        }
+        return;
       }
 
-      window.location.href = mailtoUrl;
+      const originalHTML = submitBtn ? submitBtn.innerHTML : 'Send Message';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending Message...';
+      }
+
+      // Direct asynchronous delivery to talentlens.rp@gmail.com
+      fetch(`https://formsubmit.co/ajax/${recipient}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: `[TalentLens AI] New inquiry from ${name}`,
+          _template: 'table'
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.style.background = 'rgba(16, 185, 129, 0.12)';
+          statusBox.style.border = '1px solid rgba(16, 185, 129, 0.35)';
+          statusBox.style.color = '#34d399';
+          statusBox.innerHTML = `✓ <strong>Message Delivered!</strong> Thank you, ${name}. Your message has been sent directly to <strong>${recipient}</strong>. We will reply to <em>${email}</em> promptly.`;
+        }
+        if (submitBtn) {
+          submitBtn.innerHTML = '✓ Sent Successfully';
+        }
+        directForm.reset();
+        if (charCounter) charCounter.textContent = '0/1000';
+        setTimeout(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalHTML;
+          }
+        }, 5000);
+      })
+      .catch(err => {
+        console.warn('Direct delivery network fallback', err);
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.style.background = 'rgba(245, 158, 11, 0.12)';
+          statusBox.style.border = '1px solid rgba(245, 158, 11, 0.35)';
+          statusBox.style.color = '#fbbf24';
+          statusBox.innerHTML = `Opening your email client to send your message directly to <strong>${recipient}</strong>...`;
+        }
+        const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(`[TalentLens AI Inquiry] From ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nSent via TalentLens AI Contact Portal`)}`;
+        window.location.href = mailtoUrl;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHTML;
+        }
+      });
     });
   }
 
