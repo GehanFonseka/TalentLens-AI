@@ -97,9 +97,10 @@ function initDocumentCatalogue() {
     const filtered = docs.filter(doc => {
       const matchesCategory = (currentCategory === 'All') || 
         (doc.category.toLowerCase().includes(currentCategory.toLowerCase())) ||
+        (currentCategory === 'Final' && (doc.category.includes('Final') || doc.category.includes('Thesis') || doc.category.includes('Report'))) ||
         (currentCategory === 'Proposals' && doc.category.includes('Proposal')) ||
-        (currentCategory === 'Charter' && (doc.category.includes('Charter') || doc.category.includes('Topic Assessment'))) ||
-        (currentCategory === 'Final' && doc.category.includes('Final'));
+        (currentCategory === 'Presentations' && (doc.category.includes('Presentation') || doc.type === 'PPTX' || doc.type === 'POTM')) ||
+        (currentCategory === 'TAF' && (doc.category.includes('Topic Assessment') || doc.category.includes('TAF')));
 
       const query = currentSearchQuery.toLowerCase();
       const matchesSearch = !query || 
@@ -302,7 +303,7 @@ function initMilestonesPage() {
 }
 
 /* ==========================================================================
-   4. PRESENTATIONS PAGE (33-SLIDE VIEWER)
+   4. PRESENTATIONS PAGE (MULTI-DECK INTERACTIVE VIEWER)
    ========================================================================== */
 function initPresentationViewer() {
   const slideStage = document.getElementById('slide-stage');
@@ -313,40 +314,115 @@ function initPresentationViewer() {
   const prevBtn = document.getElementById('slide-prev-btn');
   const nextBtn = document.getElementById('slide-next-btn');
   const slideSelect = document.getElementById('slide-jump-select');
+  const deckTabs = document.querySelectorAll('#deck-tabs-container .deck-tab-btn');
+  const deckBadgeEl = document.getElementById('deck-badge-display');
+  const deckTitleEl = document.getElementById('deck-title-display');
+  const deckDescEl = document.getElementById('deck-desc-display');
+  const downloadDeckBtn = document.getElementById('download-deck-btn');
+  const slideStageHeader = document.getElementById('slide-stage-header');
+  const deckPreviewBtns = document.querySelectorAll('.deck-preview-btn');
 
   if (!slideStage || !window.PROJECT_DATA) return;
 
-  const slides = window.PROJECT_DATA.slidesIndex || [];
+  const decks = window.PROJECT_DATA.decks || {};
+  const decksSlides = window.PROJECT_DATA.decksSlides || {};
+
+  // Check URL query param ?deck=...
+  const urlParams = new URLSearchParams(window.location.search);
+  let activeDeckKey = urlParams.get('deck') || 'proposal';
+  if (!decks[activeDeckKey]) activeDeckKey = 'proposal';
+
+  let currentSlides = decksSlides[activeDeckKey] || window.PROJECT_DATA.slidesIndex || [];
   let currentIndex = 0;
 
-  // Populate slide jump select
-  if (slideSelect && slideSelect.options.length === 0) {
-    slides.forEach((s, idx) => {
-      const opt = document.createElement('option');
-      opt.value = idx;
-      opt.textContent = `Slide ${s.num}: ${s.title.substring(0, 32)}`;
-      slideSelect.appendChild(opt);
+  function setDeck(deckKey, resetIndex = true) {
+    if (!decks[deckKey]) deckKey = 'proposal';
+    activeDeckKey = deckKey;
+    currentSlides = decksSlides[activeDeckKey] || [];
+    if (resetIndex) currentIndex = 0;
+
+    // Update Tab UI
+    deckTabs.forEach(tab => {
+      const isMatch = tab.getAttribute('data-deck') === activeDeckKey;
+      tab.classList.toggle('active', isMatch);
+      tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
     });
+
+    // Update Featured Deck Card
+    const dInfo = decks[activeDeckKey];
+    if (dInfo) {
+      if (deckBadgeEl) deckBadgeEl.textContent = dInfo.badge;
+      if (deckTitleEl) deckTitleEl.textContent = dInfo.title;
+      if (deckDescEl) deckDescEl.textContent = dInfo.leadDesc;
+      if (downloadDeckBtn) {
+        downloadDeckBtn.href = dInfo.url;
+        downloadDeckBtn.setAttribute('download', `${dInfo.id}.pptx`);
+      }
+      if (slideStageHeader) slideStageHeader.textContent = dInfo.stageTag;
+    }
+
+    // Populate Jump-to select
+    if (slideSelect) {
+      slideSelect.innerHTML = '';
+      currentSlides.forEach((s, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `Slide ${s.num}: ${s.title.substring(0, 36)}`;
+        slideSelect.appendChild(opt);
+      });
+    }
+
+    renderSlide();
+  }
+
+  function renderSlide() {
+    if (!currentSlides || currentSlides.length === 0) return;
+    if (currentIndex >= currentSlides.length) currentIndex = currentSlides.length - 1;
+    if (currentIndex < 0) currentIndex = 0;
+
+    const s = currentSlides[currentIndex];
+
+    if (slideNumEl) slideNumEl.textContent = `Slide ${s.num} of ${currentSlides.length}`;
+    if (slideTitleEl) slideTitleEl.textContent = s.title;
+    if (slideDescEl) slideDescEl.textContent = s.desc;
+    if (slideTagEl) slideTagEl.textContent = s.tag || 'Overview';
+    if (slideSelect) slideSelect.value = currentIndex;
+
+    if (prevBtn) prevBtn.disabled = currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentIndex === currentSlides.length - 1;
+  }
+
+  // Jump select change
+  if (slideSelect) {
     slideSelect.addEventListener('change', (e) => {
       currentIndex = parseInt(e.target.value, 10);
       renderSlide();
     });
   }
 
-  function renderSlide() {
-    if (slides.length === 0) return;
-    const s = slides[currentIndex];
+  // Tab buttons click
+  deckTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const deck = tab.getAttribute('data-deck');
+      setDeck(deck);
+    });
+  });
 
-    if (slideNumEl) slideNumEl.textContent = `Slide ${s.num} of ${slides.length}`;
-    if (slideTitleEl) slideTitleEl.textContent = s.title;
-    if (slideDescEl) slideDescEl.textContent = s.desc;
-    if (slideTagEl) slideTagEl.textContent = s.tag;
-    if (slideSelect) slideSelect.value = currentIndex;
+  // Schedule card preview buttons click
+  deckPreviewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetDeck = btn.getAttribute('data-deck-target');
+      if (targetDeck) {
+        setDeck(targetDeck);
+        const viewerEl = document.getElementById('featured-deck-section');
+        if (viewerEl) {
+          viewerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
 
-    if (prevBtn) prevBtn.disabled = currentIndex === 0;
-    if (nextBtn) nextBtn.disabled = currentIndex === slides.length - 1;
-  }
-
+  // Prev / Next button listeners
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       if (currentIndex > 0) {
@@ -358,17 +434,17 @@ function initPresentationViewer() {
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      if (currentIndex < slides.length - 1) {
+      if (currentIndex < currentSlides.length - 1) {
         currentIndex++;
         renderSlide();
       }
     });
   }
 
-  // Keyboard navigation for presentation slides
+  // Keyboard navigation
   document.addEventListener('keydown', (e) => {
-    if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
-    if (e.key === 'ArrowRight' && currentIndex < slides.length - 1) {
+    if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA' || document.activeElement.tagName === 'SELECT') return;
+    if (e.key === 'ArrowRight' && currentIndex < currentSlides.length - 1) {
       currentIndex++;
       renderSlide();
     } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
@@ -377,7 +453,8 @@ function initPresentationViewer() {
     }
   });
 
-  renderSlide();
+  // Initialize with selected deck
+  setDeck(activeDeckKey);
 }
 
 /* ==========================================================================
@@ -620,15 +697,44 @@ function openModalViewer(url, title) {
 
   if (titleEl) titleEl.textContent = title || 'Document Preview';
   if (bodyEl) {
-    bodyEl.innerHTML = `
-      <div style="height: 60vh; min-height: 400px; width: 100%;">
-        <iframe src="${url}#toolbar=0" style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md); background: #ffffff;" title="${escapeHTML(title)}"></iframe>
-      </div>
-      <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; color: var(--text-muted);">Serving directly from local research workspace.</span>
-        <a href="${url}" class="btn btn-primary btn-sm" download target="_blank">Download Original File</a>
-      </div>
-    `;
+    const isPptx = url.endsWith('.pptx') || url.endsWith('.potm');
+    if (isPptx) {
+      let deckKey = 'proposal';
+      if (url.includes('Progress-Presentation-1') || url.includes('PP1')) deckKey = 'pp1';
+      else if (url.includes('Progress-Presentation-2') || url.includes('PP2')) deckKey = 'pp2';
+      else if (url.includes('Final-Presentation') || url.includes('Final')) deckKey = 'final';
+
+      bodyEl.innerHTML = `
+        <div style="background: rgba(13, 23, 38, 0.9); border: 1px solid var(--border-medium); border-radius: var(--radius-md); padding: 2.5rem; text-align: center;">
+          <div style="width: 64px; height: 64px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+            <span style="font-size: 1.6rem; font-weight: 800; color: #fbbf24;">PPTX</span>
+          </div>
+          <h3 style="color: var(--text-white); font-size: 1.3rem; margin-bottom: 0.5rem;">${escapeHTML(title)}</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 520px; margin: 0 auto 1.75rem; line-height: 1.6;">
+            PowerPoint presentation deck ready for offline download or in-browser slide viewing via the interactive presentation player.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="${url}" class="btn btn-primary" download>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Presentation (.pptx)
+            </a>
+            <a href="presentations.html?deck=${deckKey}" class="btn btn-secondary">
+              Open Interactive Slide Player ↗
+            </a>
+          </div>
+        </div>
+      `;
+    } else {
+      bodyEl.innerHTML = `
+        <div style="height: 60vh; min-height: 400px; width: 100%;">
+          <iframe src="${url}#toolbar=0" style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md); background: #ffffff;" title="${escapeHTML(title)}"></iframe>
+        </div>
+        <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Serving directly from local research workspace.</span>
+          <a href="${url}" class="btn btn-primary btn-sm" download target="_blank">Download Original File</a>
+        </div>
+      `;
+    }
   }
 
   modal.classList.add('open');

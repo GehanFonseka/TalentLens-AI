@@ -92,14 +92,28 @@ In compliance with academic honesty requirements, the website discloses:
 - **Current Status:** Authentic researcher portrait photographs extracted directly from the official research presentation deck (`assets/images/team/gehan.png`, `chamudi.jpeg`, `kavishka.jpeg`, `sajani.jpeg`) are active across `about.html` and `assets/js/data.js`.
 - **Fallbacks:** SVG placeholders remain in `assets/images/placeholders/` as fallbacks if needed.
 
-### Documents
-- **Available:** Topic Assessment Form, 4 Individual Proposals, Proposal Presentation Deck, Template.
-- **Sample Deliverables:** `Project-Charter-Sample.pdf` and `Ethics-Clearance-Checklist-Sample.pdf` (explicitly marked with red placeholder headers).
-- **Pending Deliverables:** Progress Reports 1 & 2, Individual Final Dissertations, Final Comprehensive Report.
+### Documents & Presentations
+- **Available Decks:**
+  1. **Proposal Presentation Deck (`R26-IT-082-Proposal-Presentation.pptx`):** 33 Slides • 6.50 MB (Delivered & Approved, March 2026).
+  2. **Progress Presentation 1 Deck (`R26-IT-082-Progress-Presentation-1.pptx`):** 23 Slides • 7.37 MB (Completed 50% Milestone, June 2026).
+  3. **Progress Presentation 2 Deck (`R26-IT-082-Progress-Presentation-2.pptx`):** 9 Slides • 4.60 MB (Completed 90% Milestone, August 2026).
+  4. **Final Assessment & Viva Deck (`R26-IT-082-Final-Presentation.pptx`):** 9 Slides • 2.01 MB (Delivered Defense, October 2026).
+  5. **Official SLIIT Template (`Proposal-Presentation-Template.potm`):** 14 Slides • 458 KB.
+- **Available Documents & Deliverables (100% Authentic):**
+  1. **Common Integrated Solution Report (`R26-IT-082_Common_Integrated_Solution_Report.pdf`):** 41 Pages • 775 KB (October 2026).
+  2. **Individual Final Thesis — Fonseka W.G.K. (`R26-IT-082_IT22248794_Fonseka_WGK_Final_Thesis.pdf`):** 48 Pages • 1.39 MB.
+  3. **Individual Final Thesis — Jayantha C.H. (`R26-IT-082_IT22226914_Jayantha_CH_Final_Thesis.pdf`):** 46 Pages • 898 KB.
+  4. **Individual Final Thesis — Deshan M.A.K. (`R26-IT-082_IT22195616_Deshan_MAK_Final_Thesis.pdf`):** 61 Pages • 1.11 MB.
+  5. **Individual Final Thesis — Tennakoon T.M.S.S. (`R26-IT-082_IT22197832_Tennakoon_TMSS_Final_Thesis.pdf`):** 64 Pages • 777 KB.
+  6. **Topic Assessment Form (`Topic-Assessment-Form-TAF_R26-IT-082.pdf`):** 9 Pages • 417 KB (January 2026).
+  7. **Four Student Research Proposals (March 2026):** Fonseka (616 KB), Jayantha (1.10 MB), Deshan (1.06 MB), Tennakoon (1.03 MB).
+- **Clean Archive Notice:** All preliminary sample placeholders (`Project-Charter-Sample.pdf` and `Ethics-Clearance-Checklist-Sample.pdf`) have been completely purged from the document catalog and repository. Every linked file is a genuine, verified SLIIT research deliverable.
 
 ---
 
-## 7. Package Size Audit (< 20 MB Limit)
+## 7. Presentation Decks Optimization & Distribution
 
-- **Total Upload Package Size:** ~14.6 MB (comfortably below the SLIIT 20 MB limit).
-- **Optimization Strategy:** The embedded 8.5 MB high-bitrate video within `R26-IT-082.pptx` was re-encoded with H.264/AAC, reducing the presentation deck from 13.06 MB to 6.50 MB with zero loss of slide fidelity or visual layout. The uncompressed video master is preserved locally.
+- **All 4 Milestone Decks Active:** Proposal Defense (33 slides), PP1 (23 slides), PP2 (9 slides), and Final Presentation (9 slides).
+- **Interactive Multi-Deck Viewer:** The in-browser slide player on `presentations.html` enables reviewers to toggle dynamically between all four presentation decks, view individual slide titles and structured abstracts, jump directly to any slide, and navigate via keyboard or mouse.
+- **Optimization Strategy:** High-bitrate video streams inside `Proposal-Presentation.pptx`, `PP1.pptx`, and `PP2.pptx` were optimized using H.264/AAC, ensuring fast web downloads and responsiveness while maintaining 100% visual fidelity and original slide layout.
+

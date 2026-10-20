@@ -79,16 +79,22 @@ research-website/
     │       ├── interview-architecture.jpg
     │       ├── gantt-chart.png
     │       └── wbs-chart.png
-    ├── documents/               # Real & sample PDF deliverables
+    ├── documents/               # Real PDF deliverables & final theses
     │   ├── Topic-Assessment-Form-TAF_R26-IT-082.pdf
+    │   ├── R26-IT-082_Common_Integrated_Solution_Report.pdf
+    │   ├── R26-IT-082_IT22248794_Fonseka_WGK_Final_Thesis.pdf
+    │   ├── R26-IT-082_IT22226914_Jayantha_CH_Final_Thesis.pdf
+    │   ├── R26-IT-082_IT22195616_Deshan_MAK_Final_Thesis.pdf
+    │   ├── R26-IT-082_IT22197832_Tennakoon_TMSS_Final_Thesis.pdf
     │   ├── R26-IT-082_IT22248794_Fonseka_WGK_Proposal.pdf
     │   ├── R26-IT-082_IT22226914_Jayantha_CH_Proposal.pdf
     │   ├── R26-IT-82_IT22195616_Deshan_MAK_Proposal.pdf
-    │   ├── R26-IT-82_IT22197832_Tennakoon_TMSS_Proposal.pdf
-    │   ├── Project-Charter-Sample.pdf
-    │   └── Ethics-Clearance-Checklist-Sample.pdf
+    │   └── R26-IT-82_IT22197832_Tennakoon_TMSS_Proposal.pdf
     └── presentations/           # Slide decks & templates
         ├── R26-IT-082-Proposal-Presentation.pptx
+        ├── R26-IT-082-Progress-Presentation-1.pptx
+        ├── R26-IT-082-Progress-Presentation-2.pptx
+        ├── R26-IT-082-Final-Presentation.pptx
         └── Proposal-Presentation-Template.potm
 ```
 

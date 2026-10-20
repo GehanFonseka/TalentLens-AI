@@ -58,25 +58,47 @@
     <section class="section" id="featured-deck-section">
       <div class="container">
         
+        <!-- Deck Selector Tabs -->
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">
+            Select Milestone Presentation Deck:
+          </div>
+          <div class="deck-selector-tabs" id="deck-tabs-container" role="tablist" aria-label="Select presentation deck">
+            <button class="deck-tab-btn active" data-deck="proposal" id="tab-deck-proposal" role="tab" aria-selected="true">
+              <span>🎓</span> Proposal Presentation <span class="badge badge-emerald" style="padding: 2px 6px; font-size: 0.72rem;">33 Slides</span>
+            </button>
+            <button class="deck-tab-btn" data-deck="pp1" id="tab-deck-pp1" role="tab" aria-selected="false">
+              <span>🚀</span> Progress Pres. 1 (50%) <span class="badge badge-blue" style="padding: 2px 6px; font-size: 0.72rem;">23 Slides</span>
+            </button>
+            <button class="deck-tab-btn" data-deck="pp2" id="tab-deck-pp2" role="tab" aria-selected="false">
+              <span>⚡</span> Progress Pres. 2 (90%) <span class="badge badge-cyan" style="padding: 2px 6px; font-size: 0.72rem;">9 Slides</span>
+            </button>
+            <button class="deck-tab-btn" data-deck="final" id="tab-deck-final" role="tab" aria-selected="false">
+              <span>🏆</span> Final Viva Presentation <span class="badge badge-amber" style="padding: 2px 6px; font-size: 0.72rem;">9 Slides</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Featured Deck Download Card -->
-        <div class="glass-card" style="margin-bottom: 2.5rem; border-top: 2px solid var(--primary);">
+        <div class="glass-card" id="featured-deck-card" style="margin-bottom: 2.5rem; border-top: 2px solid var(--primary); transition: all 0.3s ease;">
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
             <div>
-              <span class="badge badge-emerald" style="margin-bottom: 8px;">Official Deck • Approved</span>
-              <h2 style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 6px;">Project Proposal Defense Deck</h2>
-              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+              <span class="badge badge-emerald" id="deck-badge-display" style="margin-bottom: 8px;">Official Deck • Approved</span>
+              <h2 id="deck-title-display" style="color: var(--text-white); font-size: 1.4rem; margin-bottom: 6px;">Project Proposal Defense Deck</h2>
+              <p id="deck-desc-display" style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
                 Delivered before the SLIIT Examination Panel • 33 Slides • March 2026 • 6.50 MB Optimized PowerPoint Presentation
               </p>
             </div>
-            <div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               <a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download class="btn btn-primary" id="download-deck-btn">
-                Download Slide Deck (.pptx)
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Download Deck (.pptx)
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Interactive 33-Slide Viewer -->
+        <!-- Interactive Slide Viewer -->
         <div class="slide-viewer-wrap" id="interactive-viewer">
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 10px;">
@@ -86,13 +108,13 @@
 
             <div style="display: flex; align-items: center; gap: 10px;">
               <label for="slide-jump-select" style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600;">Jump to:</label>
-              <select id="slide-jump-select" class="milestone-select" style="padding: 6px 12px; font-size: 0.82rem; min-width: 220px;" aria-label="Jump directly to a slide"></select>
+              <select id="slide-jump-select" class="milestone-select" style="padding: 6px 12px; font-size: 0.82rem; min-width: 240px;" aria-label="Jump directly to a slide"></select>
             </div>
           </div>
 
           <div class="slide-viewer-stage" id="slide-stage" tabindex="0" aria-label="Slide content canvas">
             <div class="slide-badge-row">
-              <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em;">
+              <span id="slide-stage-header" style="font-size: 0.75rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em;">
                 SLIIT IT4010 RESEARCH PROPOSAL • R26-IT-082
               </span>
               <span style="font-size: 0.75rem; color: var(--primary-glow); font-weight: 600;">Use keyboard ← and → arrow keys</span>
@@ -108,8 +130,8 @@
             </div>
 
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; font-size: 0.78rem; color: var(--text-dim);">
-              <span>Faculty of Computing • Department of Information Technology</span>
-              <span>Academic Year 2025/2026</span>
+              <span id="slide-footer-left">Faculty of Computing • Department of Information Technology</span>
+              <span id="slide-footer-right">Academic Year 2025/2026</span>
             </div>
           </div>
 
@@ -117,7 +139,7 @@
             <button id="slide-prev-btn" class="btn btn-secondary btn-sm" disabled>
               ← Previous Slide
             </button>
-            <span style="font-size: 0.8rem; color: var(--text-dim);">Navigable with mouse or arrow keys</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Navigable with mouse or keyboard arrows</span>
             <button id="slide-next-btn" class="btn btn-primary btn-sm">
               Next Slide →
             </button>
@@ -130,41 +152,122 @@
             <div class="section-eyebrow">Milestone Presentations</div>
             <h2 class="section-title">Assessment Deck Schedule</h2>
             <p class="section-desc">
-              All presentation decks across the undergraduate curriculum lifecycle.
+              All presentation slide decks across the undergraduate research curriculum lifecycle.
             </p>
           </div>
 
-          <div class="grid-3">
-            <div class="glass-card stat-card">
-              <span class="badge badge-emerald" style="margin-bottom: 8px;">Delivered &amp; Approved</span>
-              <h4 style="color: var(--text-white); font-size: 1.1rem; margin-bottom: 4px;">Proposal Presentation</h4>
-              <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">March 2026 • 12% Marks</p>
-              <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
-                Comprehensive introduction of the research problem, literature matrix, and four module methodologies.
-              </p>
-              <a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download class="btn btn-secondary btn-sm" style="width: 100%;">Download .pptx</a>
+          <div class="grid-2" style="gap: 24px;">
+            <!-- Proposal Presentation Card -->
+            <div class="glass-card stat-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                  <span class="badge badge-emerald">Delivered &amp; Approved • PROP-01</span>
+                  <span class="doc-type-icon pptx">PPTX • 6.50 MB</span>
+                </div>
+                <h4 style="color: var(--text-white); font-size: 1.18rem; margin-bottom: 4px;">Project Proposal Defense Deck</h4>
+                <p style="font-size: 0.82rem; color: var(--text-dim); margin-bottom: 12px;">March 2026 • 12% Marks • 33 Slides</p>
+                <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1.25rem;">
+                  Comprehensive introduction of the research problem, four subproblems, literature survey matrix, component allocations, system architecture, budget, Gantt schedule, and work breakdown structure.
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: auto;">
+                <a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">
+                  Download .pptx
+                </a>
+                <button class="btn btn-secondary btn-sm deck-preview-btn" data-deck-target="proposal" style="flex: 1;">
+                  View in Player ↗
+                </button>
+              </div>
             </div>
 
-            <div class="glass-card stat-card">
-              <span class="badge badge-emerald" style="margin-bottom: 8px;">Completed</span>
-              <h4 style="color: var(--text-white); font-size: 1.1rem; margin-bottom: 4px;">Progress Pres. 1 (50%)</h4>
-              <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">June 2026 • 15% Marks</p>
-              <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
-                Review covering document parsing, audio transcription via Faster-Whisper, and initial cross-encoder prototypes.
-              </p>
-              <span style="font-size: 0.78rem; color: var(--text-dim); display: block; text-align: center;">Archived in Department Repository</span>
+            <!-- Progress Presentation 1 Card -->
+            <div class="glass-card stat-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                  <span class="badge badge-blue">Completed • PP-01</span>
+                  <span class="doc-type-icon pptx">PPTX • 7.37 MB</span>
+                </div>
+                <h4 style="color: var(--text-white); font-size: 1.18rem; margin-bottom: 4px;">Progress Presentation 1 (50% Milestone)</h4>
+                <p style="font-size: 0.82rem; color: var(--text-dim); margin-bottom: 12px;">June 2026 • 15% Marks • 23 Slides</p>
+                <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1.25rem;">
+                  Mid-term progress review presenting responses to proposal panel feedback, Sri Lankan dataset investigation, design excellence of the solution, four individual subsystem prototypes, customer personas, and cost recovery model.
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: auto;">
+                <a href="assets/presentations/R26-IT-082-Progress-Presentation-1.pptx" download class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">
+                  Download .pptx
+                </a>
+                <button class="btn btn-secondary btn-sm deck-preview-btn" data-deck-target="pp1" style="flex: 1;">
+                  View in Player ↗
+                </button>
+              </div>
             </div>
 
-            <div class="glass-card stat-card-cyan">
-              <span class="badge badge-cyan" style="margin-bottom: 8px;">Completed</span>
-              <h4 style="color: var(--text-white); font-size: 1.1rem; margin-bottom: 4px;">Progress Pres. 2 (90%)</h4>
-              <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 12px;">August 2026 • 18% Marks</p>
-              <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
-                Near-final system review presenting threshold calibration (τ=0.33), TreeSHAP feature attributions, and empirical review.
-              </p>
-              <span style="font-size: 0.78rem; color: var(--text-dim); display: block; text-align: center;">Archived in Department Repository</span>
+            <!-- Progress Presentation 2 Card -->
+            <div class="glass-card stat-card-cyan" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                  <span class="badge badge-cyan">Completed • PP-02</span>
+                  <span class="doc-type-icon pptx">PPTX • 4.60 MB</span>
+                </div>
+                <h4 style="color: var(--text-white); font-size: 1.18rem; margin-bottom: 4px;">Progress Presentation 2 (90% Milestone)</h4>
+                <p style="font-size: 0.82rem; color: var(--text-dim); margin-bottom: 12px;">August 2026 • 18% Marks • 9 Slides</p>
+                <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1.25rem;">
+                  Near-final system review presenting team specialization, end-to-end integration across all four research modules, CatBoost threshold calibration (τ = 0.33), TreeSHAP feature attributions, and empirical feature ablation.
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: auto;">
+                <a href="assets/presentations/R26-IT-082-Progress-Presentation-2.pptx" download class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">
+                  Download .pptx
+                </a>
+                <button class="btn btn-secondary btn-sm deck-preview-btn" data-deck-target="pp2" style="flex: 1;">
+                  View in Player ↗
+                </button>
+              </div>
+            </div>
+
+            <!-- Final Presentation / Viva Voce Card -->
+            <div class="glass-card stat-card" style="display: flex; flex-direction: column; justify-content: space-between; border-top: 2px solid var(--accent-amber);">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                  <span class="badge badge-amber">Final Defense • FA-01 / VIVA</span>
+                  <span class="doc-type-icon pptx">PPTX • 2.01 MB</span>
+                </div>
+                <h4 style="color: var(--text-white); font-size: 1.18rem; margin-bottom: 4px;">Final Presentation &amp; Viva Voce Deck</h4>
+                <p style="font-size: 0.82rem; color: var(--text-dim); margin-bottom: 12px;">October / November 2026 • 15% Marks • 9 Slides</p>
+                <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1.25rem;">
+                  Official final assessment slide deck delivered before the SLIIT Faculty of Computing examination board, synthesizing individual achievements across all four subsystems, system future directions, and user validation results.
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: auto;">
+                <a href="assets/presentations/R26-IT-082-Final-Presentation.pptx" download class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">
+                  Download .pptx
+                </a>
+                <button class="btn btn-secondary btn-sm deck-preview-btn" data-deck-target="final" style="flex: 1;">
+                  View in Player ↗
+                </button>
+              </div>
             </div>
           </div>
+
+          <!-- Institutional Template Card -->
+          <div class="glass-card" style="margin-top: 2rem; border-left: 3px solid var(--accent-blue); padding: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+              <div>
+                <span class="badge badge-blue" style="margin-bottom: 6px;">Institutional Template • SLIIT Faculty of Computing</span>
+                <h4 style="color: var(--text-white); font-size: 1.05rem; margin-bottom: 4px;">Official Proposal Presentation Slide Template (.potm)</h4>
+                <p style="font-size: 0.84rem; color: var(--text-muted); margin: 0;">
+                  Official PowerPoint macro-enabled template (14 slides • 458 KB) provided by the Department of Information Technology for undergraduate research defense formatting.
+                </p>
+              </div>
+              <div>
+                <a href="assets/presentations/Proposal-Presentation-Template.potm" download class="btn btn-secondary btn-sm">
+                  Download Template (.potm)
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -203,7 +306,9 @@
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download>Proposal Deck</a></li>
+            <li><a href="presentations.html">Milestone Slides</a></li>
+            <li><a href="assets/presentations/R26-IT-082-Proposal-Presentation.pptx" download>Proposal Deck (.pptx)</a></li>
+            <li><a href="assets/presentations/R26-IT-082-Final-Presentation.pptx" download>Final Viva Deck (.pptx)</a></li>
           </ul>
         </div>
 
